@@ -6,7 +6,11 @@ USER root
 # Add the ability to use PPAs
 RUN amazon-linux-extras install docker
 
-# Switch back to the jenkins user.
+# Add jenkins to a relevant group and ID (YMMV, you may have to change the GID here...)
+RUN usermod -aG docker jenkins
+RUN groupadd -g 998 debiandocker
+RUN usermod -aG debiandocker jenkins
 
+# Switch back to the jenkins user.
 USER jenkins
 

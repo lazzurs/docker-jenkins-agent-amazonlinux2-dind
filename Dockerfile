@@ -1,4 +1,4 @@
-FROM ghcr.io/lazzurs/jenkins-agent-amazonlinux2
+FROM ghcr.io/amachsoftware/jenkins-agent-amazonlinux2
 
 # Switch to root
 USER root

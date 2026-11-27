@@ -20,7 +20,7 @@ jobs:
   buildx:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v7
     - name: Login to Packages Container registry
       uses: docker/login-action@v4
       with:
